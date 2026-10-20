@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/MeloongCore.Wpf_Source/">
+    <Project Path="MeloongCore.Wpf_Source/MeloongCore.Wpf.csproj" />
+  </Folder>
+  <Folder Name="/MeloongCore_Source/">
+    <Project Path="MeloongCore_Source/MeloongCore.csproj" />
+  </Folder>
+  <Folder Name="/PCL2_Source_CS/">
+    <Project Path="PCL2_Source_CS/Plain Craft Launcher 2.csproj" />
+  </Folder>
+  <Folder Name="/PCLCS_Source/">
+    <Project Path="PCLCS_Source/PCLCS.csproj" />
+  </Folder>
+</Solution>

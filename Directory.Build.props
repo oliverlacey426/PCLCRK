@@ -1,0 +1,7 @@
+<Project>
+  <!-- 让 net48 工程在没有装 Visual Studio / .NET Framework 目标包的机器上也能编译：
+       SDK 会通过这个 NuGet 包取到 .NET Framework 参考程序集。 -->
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net4'))">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

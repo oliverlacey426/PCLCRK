@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>PCLCS</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <RootNamespace />
+    <NoWarn>$(NoWarn);CS0168;CS0219;CS0162;CS0414;CS0649;CS0169;CS8509;CS8618;CS1591;CS0108;CS0114;SYSLIB0003;SYSLIB0050;CS0618;CS8600;CS8601;CS8602;CS8603;CS8604;CS8619;CS8620;CS8625;CS8629;CS8631;CS8632;CS8714;CS8765;CS8767;CS8770</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="**\*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MeloongCore_Source\MeloongCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 原程序集内嵌资源，保持原有资源名 -->
+    <EmbeddedResource Include="EmbeddedResources\Launch_JavaWrapper.jar">
+      <LogicalName>Launch\JavaWrapper.jar</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\Launch_LwjglUnsafeAgent.jar">
+      <LogicalName>Launch\LwjglUnsafeAgent.jar</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\Resource_WikiEntries.txt">
+      <LogicalName>Resource\WikiEntries.txt</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 第三方库保持二进制引用 -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 第三方库：全部走 NuGet 包 -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
