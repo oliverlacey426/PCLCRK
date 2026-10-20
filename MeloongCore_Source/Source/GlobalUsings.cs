@@ -1,0 +1,36 @@
+// 全局 using：与原单文件反编译输出的 using 列表一致
+
+global using global::System;
+global using global::System.Collections;
+global using global::System.Collections.Concurrent;
+global using global::System.Collections.Generic;
+global using global::System.ComponentModel;
+global using global::System.Diagnostics;
+global using global::System.Diagnostics.CodeAnalysis;
+global using global::System.Globalization;
+global using global::System.IO;
+global using global::System.IO.Compression;
+global using global::System.Linq;
+global using global::System.Net;
+global using global::System.Net.Http;
+global using global::System.Net.Sockets;
+global using global::System.Numerics;
+global using global::System.Reflection;
+global using global::System.Runtime.CompilerServices;
+global using global::System.Runtime.ExceptionServices;
+global using global::System.Runtime.InteropServices;
+global using global::System.Runtime.Versioning;
+global using global::System.Security;
+global using global::System.Security.Cryptography;
+global using global::System.Security.Permissions;
+global using global::System.Text;
+global using global::System.Text.RegularExpressions;
+global using global::System.Threading;
+global using global::System.Threading.Tasks;
+global using global::MeloongCore.Extensions;
+global using global::Microsoft.CodeAnalysis;
+global using global::Microsoft.Win32;
+global using global::Microsoft.Win32.SafeHandles;
+global using global::Newtonsoft.Json;
+global using global::Newtonsoft.Json.Linq;
+global using global::ThrottleDebounce;

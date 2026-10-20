@@ -1,0 +1,11 @@
+// MeloongCore
+
+namespace MeloongCore
+{
+	public enum RateLimitMode
+	{
+		ImmediateThenMerge,
+		ImmediateThenIgnore,
+		WaitUnillNoNewInvoke
+	}
+}
