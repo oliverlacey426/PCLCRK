@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Grid x:Class="PCL.MyMsgLogin" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PCL" RenderTransformOrigin="0,0.5" UseLayoutRounding="True" SnapsToDevicePixels="True" MinWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25">
+  <UIElement.RenderTransform>
+    <TransformGroup>
+      <RotateTransform x:Name="TransformRotate" Angle="-4">
+        <!--Unknown connection ID: 1-->
+      </RotateTransform>
+      <TranslateTransform x:Name="TransformPos" X="0" Y="40">
+        <!--Unknown connection ID: 2-->
+      </TranslateTransform>
+    </TransformGroup>
+  </UIElement.RenderTransform>
+  <Border Name="PanBorder" CornerRadius="7" Background="#FBFBFB">
+    <UIElement.Effect>
+      <DropShadowEffect Color="{DynamicResource ColorObject1}" BlurRadius="20" ShadowDepth="4" RenderingBias="Performance" Opacity="0.8" x:Name="EffectShadow">
+        <!--Unknown connection ID: 4-->
+      </DropShadowEffect>
+    </UIElement.Effect>
+    <Grid Name="PanMain" VerticalAlignment="Top" Margin="22,22,22,23">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="2" />
+        <RowDefinition Height="13" />
+        <RowDefinition Height="1*" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="LabTitle" Grid.Row="0" FontSize="23" TextTrimming="None" Foreground="{DynamicResource ColorBrush2}" HorizontalAlignment="Left" Margin="7,-1,70,9" Text="测试标题文本" VerticalAlignment="Top" SnapsToDevicePixels="False" UseLayoutRounding="False">
+        <!--Unknown connection ID: 6-->
+      </TextBlock>
+      <Rectangle Name="ShapeLine" Grid.Row="1" Height="2" Fill="{Binding Foreground, ElementName=LabTitle}">
+        <!--Unknown connection ID: 7-->
+      </Rectangle>
+      <local:MyScrollViewer x:Name="PanCaption" Grid.Row="3" VerticalAlignment="Top" Margin="0,0,0,17" Padding="7,0,15,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" DeltaMult="0.7">
+        <TextBlock Name="LabCaption" VerticalAlignment="Top" TextTrimming="None" TextWrapping="Wrap" FontSize="15" LineHeight="18" Foreground="#FF5C5C5C" FontWeight="Normal" Padding="1">
+          <!--Unknown connection ID: 9-->
+        </TextBlock>
+        <!--Unknown connection ID: 8-->
+      </local:MyScrollViewer>
+      <StackPanel Name="PanBtn" Grid.Row="4" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="150,0,8,0" Orientation="Horizontal">
+        <local:MyButton x:Name="Btn1" ColorType="Normal" Text="重新打开网页" Margin="12,0,0,0" TextPadding="7" SnapsToDevicePixels="False" Padding="5,0" UseLayoutRounding="False" local:CustomEventService.EventType="打开网页">
+          <!--Unknown connection ID: 11-->
+        </local:MyButton>
+        <local:MyButton x:Name="Btn2" ColorType="Normal" Text="复制代码" Margin="12,0,0,0" TextPadding="7" SnapsToDevicePixels="False" Padding="5,0" UseLayoutRounding="False" local:CustomEventService.EventType="复制文本">
+          <!--Unknown connection ID: 12-->
+        </local:MyButton>
+        <local:MyButton x:Name="Btn3" ColorType="Normal" Text="取消" Margin="12,0,0,0" TextPadding="7" SnapsToDevicePixels="False" Padding="5,0" UseLayoutRounding="False">
+          <!--Unknown connection ID: 13-->
+        </local:MyButton>
+        <!--Unknown connection ID: 10-->
+      </StackPanel>
+      <!--Unknown connection ID: 5-->
+    </Grid>
+    <!--Unknown connection ID: 3-->
+  </Border>
+</Grid>
