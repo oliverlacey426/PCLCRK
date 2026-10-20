@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Plain Craft Launcher 2</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+    <StartupObject>PCL.Application</StartupObject>
+    <NoWarn>$(NoWarn);CS0168;CS0219;CS0162;CS0414;CS0649;CS0169;CS8509;CS8618;SYSLIB0012;SYSLIB0014;CS8981;CS1591;SYSLIB0050;CS0108;CS0114</NoWarn>
+  </PropertyGroup>
+
+  <!-- UI：全部由 XAML 源码编译（原 BAML 已不再使用） -->
+  <ItemGroup>
+    <ApplicationDefinition Include="application.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Remove="application.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\**\*.*" />
+    <!-- 注意：只指定 font.ttf；用 resources\** 会在大小写不敏感的情况下把 Resources\*.resx 也吃进来 -->
+    <Resource Include="resources\font.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- PCL 自带的资源包：改为 .resx 源码（byte[] 用 base64），Logo/依赖兜底/ForgeInstaller 等数据在里面 -->
+    <EmbeddedResource Remove="Resources\PCL.Resources.resx" />
+    <EmbeddedResource Include="Resources\PCL.Resources.resx">
+      <LogicalName>PCL.Resources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 三个伴随库：项目引用（源码） -->
+    <ProjectReference Include="..\MeloongCore_Source\MeloongCore.csproj" />
+    <ProjectReference Include="..\MeloongCore.Wpf_Source\MeloongCore.Wpf.csproj" />
+    <ProjectReference Include="..\PCLCS_Source\PCLCS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <!-- 真·第三方库：二进制引用 -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 第三方库：全部走 NuGet 包 -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NAudio" Version="1.7.3" />
+    <PackageReference Include="CacheCow.Client" Version="2.13.1" />
+    <PackageReference Include="CacheCow.Client.FileStore" Version="2.13.1" />
+    <PackageReference Include="CacheCow.Common" Version="2.13.1" />
+    <PackageReference Include="ThrottleDebounce" Version="2.0.2" />
+    <PackageReference Include="Imazen.WebP" Version="10.0.1" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+  </ItemGroup>
+</Project>
