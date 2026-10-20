@@ -1,0 +1,30 @@
+// 全局 using：与原单文件反编译输出的 using 列表一致
+
+global using global::System;
+global using global::System.Collections.Generic;
+global using global::System.ComponentModel;
+global using global::System.Diagnostics;
+global using global::System.Diagnostics.CodeAnalysis;
+global using global::System.Globalization;
+global using global::System.IO;
+global using global::System.Linq;
+global using global::System.Reflection;
+global using global::System.Runtime.CompilerServices;
+global using global::System.Runtime.Versioning;
+global using global::System.Security;
+global using global::System.Security.Permissions;
+global using global::System.Security.Principal;
+global using global::System.Windows;
+global using global::System.Windows.Controls;
+global using global::System.Windows.Controls.Primitives;
+global using global::System.Windows.Data;
+global using global::System.Windows.Input;
+global using global::System.Windows.Media;
+global using global::System.Windows.Media.Animation;
+global using global::System.Windows.Media.Effects;
+global using global::System.Windows.Media.Media3D;
+global using global::System.Windows.Threading;
+global using global::MeloongCore.Extensions;
+global using global::Microsoft.CodeAnalysis;
+global using global::Microsoft.Win32;
+global using global::Ookii.Dialogs.Wpf;
